@@ -1,11 +1,5 @@
 import pandas as pd
 import twint
-import nest_asyncio
-nest_asyncio.apply()
-import asyncio
-loop = asyncio.new_event_loop()
-asyncio.set_event_loop(loop)
-
 
 def scrape_twitter_for_hashtag(hashtag):
     c = twint.Config()
