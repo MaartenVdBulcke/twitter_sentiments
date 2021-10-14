@@ -7,6 +7,8 @@ from nltk import word_tokenize
 from nltk.corpus import wordnet, stopwords
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+
 
 def clean_stopwords(tweet):
     stopwords_list = stopwords.words('english')
