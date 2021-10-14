@@ -1,4 +1,15 @@
+import streamlit as st
+import nltk
+
 pagetitle = 'hashtag sentiment analysis'
+
+st.set_page_config(page_title=pagetitle, layout="centered")
+@st.cache
+def download_nltk():
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('wordnet')
+download_nltk()
 
 header = 'SENTIMENT ANALYSIS ON TWITTER HASHTAGS'
 subheader = 'Analyse the sentiment of the hashtag of your interest.'

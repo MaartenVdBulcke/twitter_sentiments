@@ -1,7 +1,7 @@
 import streamlit as st
-from utils import variables, run, setup, preprocess_tweets
+from utils import variables, run, setup
+# st.set_page_config(page_title=variables.pagetitle, layout="centered")
 
-st.set_page_config(page_title=variables.pagetitle, layout="centered")
 hide_st_style = """ <style> footer {visibility: hidden;} </style> """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
