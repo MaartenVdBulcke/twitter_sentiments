@@ -14,7 +14,7 @@ def sentiment_analysis(hashtag, stopwords):
     c = twint.Config()
     c.Search = hashtag
     c.Lang = 'en'
-    c.Limit = 50
+    c.Limit = 10000
     c.Pandas = True
     twint.run.Search(c)
     scraped_tweets = twint.storage.panda.Tweets_df
