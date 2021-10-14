@@ -24,8 +24,8 @@ def load_tweet(hashtag):
 def scrape_twitter_for_hashtag(hashtag):
     c = twint.Config()
     c.Search = hashtag
-    c.Limit = 50
     c.Lang = 'en'
+    c.Limit = 5000
     c.Pandas = True
     # c.Store_csv = True
     # c.Output = 'tweets.csv'
@@ -39,7 +39,7 @@ def scrape_twitter_for_hashtag(hashtag):
     # st.write('after search')
     # tweet_list = c.search_tweet_list
     scraped_tweets = twint.storage.panda.Tweets_df
-    st.write(scraped_tweets)
+    # st.write(scraped_tweets)
     scraped_tweets = scraped_tweets[scraped_tweets.language == 'en']
     scraped_tweets.reset_index(drop=True, inplace=True)
     # scraped_tweets = pd.DataFrame({'tweet':tweet_list})
