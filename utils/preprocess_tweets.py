@@ -5,7 +5,7 @@ from emot.emo_unicode import UNICODE_EMOJI
 import nltk
 from nltk import word_tokenize
 from nltk.corpus import wordnet, stopwords
-
+nltk.download('punkt')
 
 def clean_stopwords(tweet):
     stopwords_list = stopwords.words('english')
