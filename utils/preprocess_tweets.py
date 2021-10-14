@@ -13,6 +13,8 @@ def download_nltk():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     nltk.download('wordnet')
+download_nltk()
+
 
 def clean_stopwords(tweet):
     stopwords_list = stopwords.words('english')

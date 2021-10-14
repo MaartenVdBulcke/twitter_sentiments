@@ -10,7 +10,6 @@ st.subheader(variables.subheader)
 
 # nlp, all_stopwords, flair_sentiment = setup.nlp_setup()    # setup spacy and flair
 nlp, all_stopwords = setup.nlp_setup()    # setup spacy and flair
-preprocess_tweets.download_nltk()
 
 user_input = st.text_input("", '#')
 
