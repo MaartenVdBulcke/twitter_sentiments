@@ -5,7 +5,8 @@ spacy
 matplotlib==3.4.3
 streamlit==1.0.0
 emot==3.1
-twint==2.1.20
+
 nltk==3.5
 seaborn==0.11.2
 https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.0.0/en_core_web_md-3.0.0.tar.gz
+https://github.com/himanshudabas/twint.git@origin/twint-fixes#egg=twint
