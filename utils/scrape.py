@@ -24,14 +24,15 @@ def load_tweet(hashtag):
 
 def scrape_twitter_for_hashtag(hashtag):
     c = twint.Config()
-    c.Lang = 'en'
-    c.Limit = 50
     c.Search = hashtag
+    c.Limit = 50
+    c.Lang = 'en'
     # c.Pandas = True
     # c.Hide_output = True
     # nest_asyncio.apply()
     # loop = asyncio.new_event_loop()
     # asyncio.set_event_loop(loop)
+    asyncio.set_event_loop(asyncio.new_event_loop())
     st.write('before search')
     twint.run.Search(c)
     st.write('after search')
