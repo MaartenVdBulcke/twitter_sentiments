@@ -14,7 +14,6 @@ def download_nltk():
     nltk.download('averaged_perceptron_tagger')
     nltk.download('wordnet')
 
-
 def clean_stopwords(tweet):
     stopwords_list = stopwords.words('english')
     return ' '.join(word for word in tweet.split() if word not in stopwords_list)

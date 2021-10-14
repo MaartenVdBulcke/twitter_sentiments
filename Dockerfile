@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bullseye
+FROM python:3.7
 EXPOSE 8501
 WORKDIR /app
 COPY requirements.txt ./requirements.txt

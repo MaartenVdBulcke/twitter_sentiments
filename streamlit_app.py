@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import variables, run, setup
+from utils import variables, run, setup, preprocess_tweets
 
 st.set_page_config(page_title=variables.pagetitle, layout="centered")
 hide_st_style = """ <style> footer {visibility: hidden;} </style> """
@@ -10,6 +10,7 @@ st.subheader(variables.subheader)
 
 # nlp, all_stopwords, flair_sentiment = setup.nlp_setup()    # setup spacy and flair
 nlp, all_stopwords = setup.nlp_setup()    # setup spacy and flair
+preprocess_tweets.download_nltk()
 
 user_input = st.text_input("", '#')
 
