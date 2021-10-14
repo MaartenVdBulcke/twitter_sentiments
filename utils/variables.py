@@ -9,6 +9,7 @@ def download_nltk():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     nltk.download('wordnet')
+    nltk.download('stopwords')
 download_nltk()
 
 header = 'SENTIMENT ANALYSIS ON TWITTER HASHTAGS'

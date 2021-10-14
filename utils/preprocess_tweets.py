@@ -5,7 +5,7 @@ from emot.emo_unicode import UNICODE_EMOJI
 import nltk
 from nltk import word_tokenize
 from nltk.corpus import wordnet, stopwords
-import streamlit as st
+
 
 
 def clean_stopwords(tweet):
