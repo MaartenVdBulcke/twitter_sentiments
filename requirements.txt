@@ -3,7 +3,7 @@ streamlit==0.75.0
 matplotlib==3.4.3
 wordcloud==1.8.1
 spacy==3.1
-twint==2.1.21
+twint==2.0
 seaborn==0.11.2
 pandas==1.2.4
 nltk==3.5
