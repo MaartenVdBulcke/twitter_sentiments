@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import twint
 import os
-# import nest_asyncio
 import asyncio
 
 
@@ -12,7 +11,7 @@ def load_tweet(hashtag):
   c.Search = hashtag
   c.Limit = 50
   c.Lang = 'en'
-  c.Custom["tweet"] = ['date','tweet','username']
+  # c.Custom["tweet"] = ['date','tweet','username']
   c.Output = result_loc
   c.Store_csv = True
   asyncio.set_event_loop(asyncio.new_event_loop())
@@ -20,7 +19,6 @@ def load_tweet(hashtag):
   st.write('after search')
   df = pd.read_csv(result_loc)
   os.remove(result_loc)
-  st.write('tweets.csv')
   return df
 
 

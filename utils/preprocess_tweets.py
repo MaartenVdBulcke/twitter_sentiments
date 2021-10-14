@@ -5,9 +5,14 @@ from emot.emo_unicode import UNICODE_EMOJI
 import nltk
 from nltk import word_tokenize
 from nltk.corpus import wordnet, stopwords
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('wordnet')
+import streamlit as st
+
+
+@st.cache
+def download_nltk():
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('wordnet')
 
 
 def clean_stopwords(tweet):
