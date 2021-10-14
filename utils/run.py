@@ -9,7 +9,7 @@ def sentiment_analysis(hashtag, stopwords):
     st.write(variables.waiting_message)
 
     # scraped_tweets = scrape.scrape_twitter_for_hashtag(hashtag)
-    scraped_tweets = scrape.load_tweet(hashtag)
+    scraped_tweets = scrape.scrape_twitter_for_hashtag(hashtag)
     scraped_tweets_df = scraped_tweets[['date', 'hashtags', 'tweet']]
 
     scraped_tweets_df['preprocessed_tweets'] = \

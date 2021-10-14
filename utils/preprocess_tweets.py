@@ -8,9 +8,6 @@ from nltk.corpus import wordnet, stopwords
 import streamlit as st
 
 
-
-
-
 def clean_stopwords(tweet):
     stopwords_list = stopwords.words('english')
     return ' '.join(word for word in tweet.split() if word not in stopwords_list)
