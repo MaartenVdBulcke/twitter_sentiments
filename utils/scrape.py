@@ -4,7 +4,7 @@ import twint
 def scrape_twitter_for_hashtag(hashtag):
     c = twint.Config()
     c.Lang = 'en'
-    c.Limit = 1000
+    c.Limit = 50
     c.Search = hashtag
     c.Pandas = True
     c.Hide_output = True
