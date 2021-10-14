@@ -11,7 +11,7 @@ def scrape_twitter_for_hashtag(hashtag):
     c.Search = hashtag
     c.Pandas = True
     c.Hide_output = True
-    # nest_asyncio.apply()
+    nest_asyncio.apply()
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     st.write('before search')
