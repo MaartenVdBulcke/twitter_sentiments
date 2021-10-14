@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import twint
-import nest_asyncio
-import asyncio
+# import nest_asyncio
+# import asyncio
 
 def scrape_twitter_for_hashtag(hashtag):
     c = twint.Config()
@@ -11,9 +11,9 @@ def scrape_twitter_for_hashtag(hashtag):
     c.Search = hashtag
     c.Pandas = True
     c.Hide_output = True
-    nest_asyncio.apply()
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
+    # nest_asyncio.apply()
+    # loop = asyncio.new_event_loop()
+    # asyncio.set_event_loop(loop)
     st.write('before search')
     twint.run.Search(c)
     st.write('after search')
