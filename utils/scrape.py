@@ -27,7 +27,9 @@ def scrape_twitter_for_hashtag(hashtag):
     c.Search = hashtag
     c.Limit = 50
     c.Lang = 'en'
-    c.Pandas = True
+    # c.Pandas = True
+    c.Store_csv = True
+    c.Output = 'tweets.csv'
     # c.Hide_output = True
     # nest_asyncio.apply()
     # loop = asyncio.new_event_loop()

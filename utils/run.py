@@ -1,4 +1,5 @@
 import streamlit as st
+import twint
 
 if __name__ != '__main__':
     from utils import variables, scrape, preprocess_tweets, predict_sentiment, plotting
@@ -9,7 +10,15 @@ def sentiment_analysis(hashtag, stopwords):
     st.write(variables.waiting_message)
 
     # scraped_tweets = scrape.scrape_twitter_for_hashtag(hashtag)
-    scraped_tweets = scrape.scrape_twitter_for_hashtag(hashtag)
+    # scraped_tweets = scrape.load_tweet(hashtag)
+    c = twint.Config()
+    c.Search = hashtag
+    c.Lang = 'en'
+    c.Limit = 50
+    c.Pandas = True
+    twint.run.Search(c)
+    scraped_tweets = twint.storage.panda.Tweets_df
+
     scraped_tweets_df = scraped_tweets[['date', 'hashtags', 'tweet']]
 
     scraped_tweets_df['preprocessed_tweets'] = \
