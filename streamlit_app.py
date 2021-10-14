@@ -8,7 +8,8 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 st.header(variables.header)
 st.subheader(variables.subheader)
 
-nlp, all_stopwords, flair_sentiment = setup.nlp_setup()    # setup spacy and flair
+# nlp, all_stopwords, flair_sentiment = setup.nlp_setup()    # setup spacy and flair
+nlp, all_stopwords = setup.nlp_setup()    # setup spacy and flair
 
 user_input = st.text_input("", '#')
 
@@ -22,4 +23,5 @@ if user_input is not None:
         if not hashtag[1:].isalnum():
             st.write(variables.error_message_hashtag_format_two)
         else:
-            run.sentiment_analysis(hashtag, all_stopwords, flair_sentiment)
+            # run.sentiment_analysis(hashtag, all_stopwords, flair_sentiment)
+            run.sentiment_analysis(hashtag, all_stopwords)
