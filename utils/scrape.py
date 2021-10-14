@@ -1,5 +1,7 @@
 import pandas as pd
 import twint
+import nest_asyncio
+nest_asyncio.apply()
 
 
 def scrape_twitter_for_hashtag(hashtag):
