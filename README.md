@@ -45,7 +45,7 @@ BLUE SENTIMENTS runs on Python 3.7
     textblob    == 0.15.3
     emot        == 3.1
     wordcloud   == 1.8.1
-    streamlit   ==1.0.0
+    streamlit   == 1.0.0
 
 BLUE SENTIMENTS uses <a href=https://github.com/twintproject/twint target="blank_">
 Twint</a> to scrape Twitter. To be able to use Twint when the app
