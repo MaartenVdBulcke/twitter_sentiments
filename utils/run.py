@@ -3,7 +3,7 @@ import twint
 
 
 if __name__ != '__main__':
-    from utils import variables, scrape, preprocess_tweets, predict_sentiment, plotting
+    from utils import variables, preprocess_tweets, predict_sentiment, plotting
 
 
 def sentiment_analysis(hashtag, stopwords):
