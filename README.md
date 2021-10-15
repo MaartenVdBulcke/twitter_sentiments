@@ -9,6 +9,13 @@ BLUE sentiments provides the user with the following features:
 + a graph showing the tweet sentiments ordered by day
 + a wordcloud with the most frequently found words
 
+## Try the app
+
+The app is deployed on two websites:
++ <a href=https://blue-sentiments.herokuapp.com/  target="blank_">Heroku</a>
++ <a href=https://share.streamlit.io/maartenvdbulcke/twitter_sentiments/main taget="blank_">Streamlit sharing</a>
+
+
 ## NLP: Natural Language Processing
 
 NLP is a powerful AI technique by which computers can handle 
@@ -20,9 +27,31 @@ All models were tested on the <a href=http://help.sentiment140.com/for-students 
 + <a href=https://www.nltk.org/ target="blank_">NLTK</a>
 + <a href=https://textblob.readthedocs.io/en/dev/ target="blank_">TextBlob</a>
 
+Flair had the best auc score (66%). But as it runs on Pytorch it is too heavy
+to deploy to Heroku or Streamlit. 
+NLTK had an auc score of 63% which was better than TextBlob (61%). 
+Because TextBlob ran faster, BLUE SENTIMENTS makes use of TextBlob.
 
 ## Installation
+
+BLUE SENTIMENTS runs on Python 3.7
+
 ### Packages
+    pandas      == 1.2.4
+    matplotlib  == 3.4.3
+    seaborn     == 0.11.2
+    spacy       == 3.1
+    nltk        == 3.5
+    textblob    == 0.15.3
+    emot        == 3.1
+    wordcloud   == 1.8.1
+    streamlit   ==1.0.0
+
+BLUE SENTIMENTS uses <a href=https://github.com/twintproject/twint target="blank_">
+Twint</a> to scrape Twitter. To be able to use Twint when the app
+is deployed, Twint has to be added to the requirements.txt file in the following fashion:
+
+    git+git://github.com/twintproject/twint.git@origin/master#egg=twint
 
 ### Docker
 
@@ -34,10 +63,10 @@ This image does not run locally.
 
 
 ### Impressions
-<img src="visuals/image1.png"/> 
+
+<img src="visuals/image1.png" /> 
 <img src="visuals/image2.png"/> 
 <img src="visuals/image3.png"/> 
-
 
 
 # Author 
