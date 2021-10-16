@@ -9,6 +9,7 @@ if __name__ != '__main__':
 def sentiment_analysis(hashtag, stopwords):
     with st.spinner(f"Searching Twitter for {hashtag}"):
         c = twint.Config()
+        c.Hide_output = True
         c.Search = hashtag
         c.Lang = 'en'
         c.Limit = 750
