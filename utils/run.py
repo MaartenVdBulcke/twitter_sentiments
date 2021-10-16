@@ -11,7 +11,7 @@ def sentiment_analysis(hashtag, stopwords):
         c = twint.Config()
         c.Search = hashtag
         c.Lang = 'en'
-        c.Limit = 1000
+        c.Limit = 750
         c.Pandas = True
         twint.run.Search(c)
         scraped_tweets = twint.storage.panda.Tweets_df
@@ -45,3 +45,4 @@ def sentiment_analysis(hashtag, stopwords):
                 stopwords.update(hashtag[1:])
                 fig_wordcloud = plotting.plot_wordcloud(stopwords, one_big_tweet)
                 st.pyplot(fig_wordcloud)
+

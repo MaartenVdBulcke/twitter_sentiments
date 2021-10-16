@@ -1,4 +1,5 @@
 import streamlit as st
+import gc
 from utils import variables, run, setup
 
 hide_st_style = """ <style> footer {visibility: hidden;} </style> """
@@ -21,3 +22,5 @@ if user_input is not None:
             st.write(variables.error_message_hashtag_format_two)
         else:
             run.sentiment_analysis(hashtag, all_stopwords)
+
+gc.collect()
