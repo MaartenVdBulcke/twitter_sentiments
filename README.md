@@ -11,7 +11,7 @@ BLUE sentiments provides the user with the following features:
 
 ## Try the app
 
-The app is deployed on <a href=https://share.streamlit.io/maartenvdbulcke/twitter_sentiments/main taget="blank_">Streamlit sharing</a>
+The app is deployed on <a href=https://share.streamlit.io/maartenvdbulcke/twitter_sentiments/main taget="blank_">Streamlit share</a>.
 
 
 ## NLP: Natural Language Processing
