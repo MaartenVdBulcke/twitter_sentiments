@@ -11,9 +11,7 @@ BLUE sentiments provides the user with the following features:
 
 ## Try the app
 
-The app is deployed on two websites:
-+ <a href=https://blue-sentiments.herokuapp.com/  target="blank_">Heroku</a>
-+ <a href=https://share.streamlit.io/maartenvdbulcke/twitter_sentiments/main taget="blank_">Streamlit sharing</a>
+The app is deployed on <a href=https://share.streamlit.io/maartenvdbulcke/twitter_sentiments/main taget="blank_">Streamlit share</a>.
 
 
 ## NLP: Natural Language Processing
@@ -57,9 +55,8 @@ is deployed, Twint has to be added to the requirements.txt file in the following
 
 The easiest way to use this app is to pull the 
 <a href=https://hub.docker.com/repository/docker/maartenvdbulcke/blue-sentiments target="blank_">Docker Hub image</a>. 
-This image is ready to be deployed,
-for example on Heroku or Streamlit share. 
-This image does not run locally. 
+This image is ready to be deployed, for example Streamlit share. The app is to heavy for the free tier on Heroku.
+This image does not run locally.
 
 
 ### Impressions
