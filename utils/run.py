@@ -16,6 +16,8 @@ def sentiment_analysis(hashtag, stopwords):
         c.Pandas = True
         twint.run.Search(c)
         scraped_tweets = twint.storage.panda.Tweets_df
+        scraped_tweets = scraped_tweets[scraped_tweets.language == 'en']
+        scraped_tweets.reset_index(drop=True, inplace=True)
         if len(scraped_tweets)<25:
             st.write('Not enough tweets found. Please try another hashtag')
         else:
